@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dlg:window PUBLIC "-//OpenOffice.org//DTD OfficeDocument 1.0//EN" "dialog.dtd">
+<dlg:window xmlns:dlg="http://openoffice.org/2000/dialog" xmlns:script="http://openoffice.org/2000/script" dlg:id="PyCodeDialog" dlg:left="127" dlg:top="24" dlg:width="281" dlg:height="232" dlg:closeable="true" dlg:moveable="true">
+ <dlg:bulletinboard>
+  <dlg:button dlg:id="ApplyBtn" dlg:tab-index="3" dlg:left="12" dlg:top="215" dlg:width="37" dlg:height="14" dlg:value="Apply" dlg:button-type="ok"/>
+  <dlg:button dlg:id="ExecuteBtn" dlg:tab-index="4" dlg:left="54" dlg:top="215" dlg:width="37" dlg:height="14" dlg:value="Execute">
+   <script:event script:event-name="on-mouseup" script:macro-name="vnd.sun.star.script:CASEventHandler.py$dlgPyBlock_ExecuteBtn?language=Python&amp;location=share" script:language="Script"/>
+  </dlg:button>
+  <dlg:button dlg:id="CancelBtn" dlg:tab-index="5" dlg:left="97" dlg:top="215" dlg:width="37" dlg:height="14" dlg:value="Cancel" dlg:button-type="cancel"/>
+  <dlg:button dlg:id="NextBtn" dlg:tab-index="6" dlg:left="248" dlg:top="214" dlg:width="22" dlg:height="14" dlg:value="-&gt;" dlg:button-type="cancel"/>
+  <dlg:button dlg:id="PrevBtn" dlg:tab-index="7" dlg:left="220" dlg:top="214" dlg:width="22" dlg:height="14" dlg:value="&lt;-" dlg:button-type="cancel"/>
+  <dlg:text dlg:id="Label1" dlg:tab-index="8" dlg:left="85" dlg:top="199" dlg:width="35" dlg:height="12" dlg:value="Block Name:"/>
+  <dlg:textfield dlg:id="PyCodeField" dlg:tab-index="0" dlg:left="11" dlg:top="10" dlg:width="258" dlg:height="179" dlg:hscroll="true" dlg:vscroll="true" dlg:multiline="true"/>
+  <dlg:combobox dlg:id="ScopeField" dlg:tab-index="2" dlg:left="12" dlg:top="196" dlg:width="55" dlg:height="14" dlg:help-text="Global blocks are processed before Local blocks" dlg:value="Local" dlg:spin="true">
+   <dlg:menupopup>
+    <dlg:menuitem dlg:value="Local"/>
+    <dlg:menuitem dlg:value="Global"/>
+   </dlg:menupopup>
+   <script:event script:event-name="on-itemstatechange" script:macro-name="vnd.sun.star.script:CASEventHandler.py$dlgPyBlock_ScopeField?language=Python&amp;location=share" script:language="Script"/>
+  </dlg:combobox>
+  <dlg:text dlg:id="BlockNameLabel" dlg:tab-index="9" dlg:left="120" dlg:top="199" dlg:width="92" dlg:height="10"/>
+  <dlg:checkbox dlg:id="HideCB" dlg:tab-index="1" dlg:left="220" dlg:top="200" dlg:width="50" dlg:height="10" dlg:value="Hide Block" dlg:checked="false"/>
+ </dlg:bulletinboard>
+</dlg:window>
